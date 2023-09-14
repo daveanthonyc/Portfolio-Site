@@ -14,6 +14,10 @@ import Test from './Components/Test'
 import { motion, useTransform, useScroll, useMotionValue } from 'framer-motion'
 import { useState } from 'react'
 import Button from './Components/Button'
+import nodeicon from './assets/nodejs-logo-FBE122E377-seeklogo.com.png'
+import expressicon from './assets/expressjs_logo_icon_169185.png'
+import mongodbicon from './assets/mongodb-logo-D13D67C930-seeklogo.com.png'
+import todo from './assets/todomockups.png'
 
 function App() {
   const [cursorVariant, setCursorVariant] = useState("default")
@@ -188,8 +192,13 @@ function App() {
               <SkillCard key="child2" imgurl={cssicon}>CSS</SkillCard>
               <SkillCard key="child3" imgurl={jsicon}>JavaScript</SkillCard>
               <SkillCard key="child4" imgurl={tsicon}>TypeScript</SkillCard>
-              <SkillCard key="child5" imgurl={reacticon}>React</SkillCard>
               <SkillCard key="child6" imgurl={mobx}>MobX</SkillCard>
+            </div>
+          <div className='skills-box'>
+              <SkillCard key="child9" imgurl={mongodbicon}>MongoDB</SkillCard>
+              <SkillCard key="child8" imgurl={expressicon}>Express.js</SkillCard>
+              <SkillCard key="child5" imgurl={reacticon}>React</SkillCard>
+              <SkillCard key="child7" imgurl={nodeicon}>Node.js</SkillCard>
             </div>
         </section>
         
@@ -222,9 +231,9 @@ function App() {
             <div className='portfolio-box' onMouseLeave={() => setPortfolioImg('none')} onMouseMove={(event) => {
               x.set(event.clientX)
             }}>
-              <a href="https://hilarious-moonbeam-8fac18.netlify.app/" title='live site' target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("Canva")}>
+              <a href="https://canva-job-search-clone.netlify.app/" title='live site' target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("Canva")}>
                 <p className='small-txt-font'>01.</p>
-                <motion.h2 className='heading-txt'
+                <motion.h2 className='heading-txt margin-bottom'
                   animate={{
                     transform: portfolioImg==='Canva' ? "translateX(15px)" : "translateX(0px)",
                     opacity: (portfolioImg === 'Canva' || portfolioImg === 'none') ? 1 : 0.4,
@@ -253,7 +262,7 @@ function App() {
                 />
               </a>
 
-              <div className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("ecommerce")}>
+              <a href='https://mern-todo-application.netlify.app/' title="live site" target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("ecommerce")}>
                 <p className='small-txt-font'>02.</p>
                 <motion.h2 className='heading-txt'
                   animate={{
@@ -266,8 +275,8 @@ function App() {
                   }}
                   onMouseEnter={textEnter}
                   onMouseLeave={textLeave}
-                >E-Commerce App.</motion.h2>
-                <motion.div style={{ translateX, rotateZ }} className='portfolio-soon' 
+                >MERN Todo app.</motion.h2>
+                <motion.img style={{ translateX, rotateZ }} className='portfolio-img' src={todo} alt="todo app" 
                   initial={{
                     opacity: 0,
                   }}
@@ -279,10 +288,10 @@ function App() {
                       duration: 1,
                       ease: [0.3, 1.4, 0.3, 1]
                     }
-                  }}>
-                    <p>coming soon...</p>
-                  </motion.div>
-              </div>
+                  }}
+                />
+            
+              </a>
 
               <div className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("admin")}>
                 <p className='small-txt-font'>03.</p>

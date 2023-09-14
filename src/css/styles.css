@@ -353,6 +353,7 @@
   }
 
   .skills-box {
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -466,26 +467,6 @@
     color: var(--clr-neutral-white);
   }
 
-  /* .interactive-button::after {
-    content: '';
-    display: block;
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
-    position: absolute;
-    background-color: var(--clr-primary-black);
-    transform-origin: center;
-    left: 1em;
-    bottom: -5em;
-    transition: all ease-in-out 300ms;
-    z-index: -1;
-  }
-
-  .interactive-button:hover::after {
-    transform-origin: center;
-    transform: scale(3);
-  } */
-
   .interactive-button:hover {
     color: var(--clr-primary-black);
     background-color: var(--clr-neutral-white);
@@ -538,3 +519,6 @@
     color: var(--clr-accent-yellow)
   }
 
+  .margin-bottom {
+    margin-bottom: 1rem;
+  }
