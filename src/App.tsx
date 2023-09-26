@@ -12,7 +12,7 @@ import canva from './assets/canva mockup fin.png'
 import SkillCard from './Components/SkillCard'
 import Test from './Components/Test'
 import { motion, useTransform, useScroll, useMotionValue } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Button from './Components/Button'
 import nodeicon from './assets/nodejs-logo-FBE122E377-seeklogo.com.png'
 import expressicon from './assets/expressjs_logo_icon_169185.png'
@@ -21,7 +21,7 @@ import todo from './assets/todomockups.png'
 
 function App() {
   const [cursorVariant, setCursorVariant] = useState("default")
-  const [backgroundColor, setBackgroundColor] = useState<boolean>(false)
+  const [backgroundColor, setBackgroundColor] = useState<string>('')
 
 
   const textEnter = () => {
@@ -36,12 +36,35 @@ function App() {
   const translateX2 = useTransform(scrollYProgress, [0, 1], ["0vh", "10vh"])
   const translateX3 = useTransform(scrollYProgress, [0, 1], ["0vh", "35vh"])
   const translateX4 = useTransform(scrollYProgress, [0, 1], ["0vh", "-14vh"])
+  const translateX5 = useTransform(scrollYProgress, [0, 1], ["0vh", "10vh"])
+  const translateX6 = useTransform(scrollYProgress, [0, 1], ["0vh", "-10vh"])
 
   const [portfolioImg, setPortfolioImg] = useState<string>("none")
 
   const x = useMotionValue(0);
   const rotateZ = useTransform(x, [0, window.innerWidth], [-1, 1]);
   const translateX = useTransform(x, [0, window.innerWidth], [-10, 10])
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleBackground)
+    const footerDiv = document.getElementById('footer')
+
+    function toggleBackground() {
+      const windowheight = window.innerHeight;
+      let revealtop = 0;
+      if (footerDiv) {
+        revealtop = footerDiv.getBoundingClientRect().top
+      } 
+      const revealPoint = 400;
+
+      if (revealtop < windowheight - revealPoint) {
+        setBackgroundColor('active')
+      } else {
+        setBackgroundColor('')
+      }
+
+    }
+  }, [])
 
   return (
     <>
@@ -151,14 +174,16 @@ function App() {
                   }
                 }}
                 >
-                <img className='dp' src={dp} alt="" />
-                <div className='about-txt'>
-                  <p>
-                    I'm a passionate developer based in Sydney, Australia.
-                    <br />
-                    <br />
-                    No matter how complex the problem is, I am willing to take it head-on as I thrive in pushing the boundaries of what is possible in order to create elegant solutions.
-                  </p>
+                <div className='flex-mobile'>
+                  <img className='dp' src={dp} alt="" />
+                  <div className='about-txt'>
+                    <p>
+                      I'm a passionate developer based in Sydney, Australia.
+                      <br />
+                      <br />
+                      No matter how complex the problem is, I am willing to take it head-on as I thrive in pushing the boundaries of what is possible in order to create elegant solutions.
+                    </p>
+                  </div>
                 </div>
               </motion.div>
           </section>
@@ -187,16 +212,14 @@ function App() {
           </div>
 
         <section className='section-skills'>
-          <div className='skills-box'>
+          <div className='skills-box skills-container'>
               <SkillCard key="child1" imgurl={htmlicon}>HTML</SkillCard>
               <SkillCard key="child2" imgurl={cssicon}>CSS</SkillCard>
               <SkillCard key="child3" imgurl={jsicon}>JavaScript</SkillCard>
               <SkillCard key="child4" imgurl={tsicon}>TypeScript</SkillCard>
               <SkillCard key="child6" imgurl={mobx}>MobX</SkillCard>
-            </div>
-          <div className='skills-box'>
               <SkillCard key="child9" imgurl={mongodbicon}>MongoDB</SkillCard>
-              <SkillCard key="child8" imgurl={expressicon}>Express.js</SkillCard>
+              <SkillCard key="child8" imgurl={expressicon}>Express</SkillCard>
               <SkillCard key="child5" imgurl={reacticon}>React</SkillCard>
               <SkillCard key="child7" imgurl={nodeicon}>Node.js</SkillCard>
             </div>
@@ -328,7 +351,7 @@ function App() {
 
         </section>
 
-        <footer>
+        <footer id="footer" data-state={backgroundColor}>
           <motion.div className="hero-parent"
             initial={{
               opacity: "0%",
@@ -345,11 +368,11 @@ function App() {
             }}
             >
 
-            <div className="headline-txt" onMouseEnter={() => setBackgroundColor(true)} onMouseLeave={() => setBackgroundColor(false)} data-state>
-              <motion.div style={{x: translateX3}}>
+            <div className="headline-txt">
+              <motion.div style={{x: translateX5}}>
                 <h1 className='heading-5'><span className='heading-accent'>. Contact me. </span>Let's craft<span className='heading-accent'>. Contact me.</span></h1>
               </motion.div>
-              <motion.div style={{x: translateX4}}>
+              <motion.div style={{x: translateX6}}>
                 <h1 className='heading-6'><span className='heading-accent'>. Chiang.</span> greatness.<span className='heading-accent'> Chiang.</span></h1>
               </motion.div>
             </div>

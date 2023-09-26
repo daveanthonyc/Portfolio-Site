@@ -104,7 +104,17 @@
     width: 95%;
   }
 
+  .skills-container {
+    margin-inline: auto;
+    width: 63%;
+  }
 
+  .flex-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+  }
 
   .flex-split-horizontal {
     display: flex;
@@ -272,10 +282,12 @@
   .heading-5 {
     text-align: center;
     width: max-content;
-    transform: translateX(-110vw);
+    transform: translateX(-90vw);
+    font-size: 13vw;
   }
   
   .heading-6 {
+    font-size: 13vw;
     text-align: center;
     width: max-content;
     transform: translateX(-44vw);
@@ -307,10 +319,9 @@
     filter: brightness(1.2) saturate(0%) contrast(1.1);
     width: 20vw;
     margin-bottom: 10rem;
-    /* border: 5px solid var(--clr-primary-black); */
     transform: rotate(-3deg);
     box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
-}
+  }
 
   .skill-image {
     width: 5vw;
@@ -346,7 +357,7 @@
     border-radius: 5px;
     color: var(--clr-primary-black-lighter);
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 1vw;
     font-weight: 500;
     letter-spacing: 2px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
@@ -354,7 +365,9 @@
 
   .skills-box {
     margin-top: 3rem;
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
   }
@@ -401,7 +414,7 @@
 
   .about-txt {
     font-size: 2.5vw;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
     word-spacing: 8px;
     width: 50vw;
@@ -482,6 +495,8 @@
     padding-top: 15rem;
     margin-top: 15rem;
     padding-bottom: 10vw;
+    transition: all ease-in-out 300ms;
+
   }
 
   footer::after {
@@ -499,12 +514,8 @@
 
   }
 
-  footer:hover::after {
-    opacity: 100%;
-  }
-
-  footer:hover > *{
-    color: var(--clr-neutral-white)
+  footer[data-state="active"] {
+    color: white;
   }
 
   main {
@@ -521,4 +532,123 @@
 
   .margin-bottom {
     margin-bottom: 1rem;
+  }
+
+  @media (max-width: 50em) {
+    .flex-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6vw;
+    }
+
+    .dp {
+      margin-top: 2rem;
+      margin-inline: auto;
+      border-radius: 50%;
+      filter: brightness(1.2) saturate(0%) contrast(1.1);
+      width: 25vw;
+      margin-bottom: 0rem;
+      transform: rotate(-3deg);
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .headline-txt {
+      font-size: 17vw;
+      font-weight: 400;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .heading-1 {
+      text-align: center;
+      width: max-content;
+      transform: translateX(-65vw);
+      transition: all ease-in-out 400ms
+    }
+  
+    .heading-2 {
+      text-align: center;
+      width: max-content;
+      transform: translateX(-50vw);
+    }
+  
+    .heading-3 {
+      text-align: center;
+      width: max-content;
+      transform: translateX(-23vw);
+    }
+  
+    .heading-4 {
+      text-align: center;
+      width: max-content;
+      transform: translateX(-70vw);
+    }
+  
+    .heading-5 {
+      font-size: 15vw;
+      text-align: center;
+      width: max-content;
+      transform: translateX(-100vw);
+    }
+    
+    .heading-6 {
+      font-size: 16vw;
+      text-align: center;
+      width: max-content;
+      transform: translateX(-40vw);
+    }
+
+    .small-txt-ihero {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 3rem;
+      padding-top: 2rem;
+    }
+
+    .small-txt-ihero-2 {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+      margin-top: 12rem;
+    }
+
+    .about-txt {
+      font-size: 4vw;
+      font-weight: 300;
+      letter-spacing: 1px;
+      word-spacing: 8px;
+      width: 65vw;
+    }
+
+    .small-txt-ihero-3 {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 5rem;
+      margin-top: 3vw;
+    }
+
+    .skill-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid #e5d7ce;
+      width: 7rem;
+      height: 9rem;
+      border-radius: 5px;
+      color: var(--clr-primary-black-lighter);
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .skills-container {
+      margin-inline: auto;
+      width: 83%;
+    }
   }
