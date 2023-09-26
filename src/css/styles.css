@@ -165,7 +165,7 @@
 
   .link-block[data-state="active"] {
     font-size: 1rem;
-    color: var(--clr-neutral-white);
+    color: var(--clr-accent-yellow);
     text-decoration: none;
     font-weight: 500;
     position: relative;
