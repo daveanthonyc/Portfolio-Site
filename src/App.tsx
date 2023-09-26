@@ -68,7 +68,7 @@ function App() {
 
   return (
     <>
-      <Cursor cursorVariant={cursorVariant}/>
+      <Cursor cursorVariant={cursorVariant} backgroundState={backgroundColor}/>
       <header>
         <Nav textEnter={textEnter} textLeave={textLeave} backgroundState={backgroundColor}></Nav>
       </header>

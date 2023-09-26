@@ -327,7 +327,7 @@
     width: 2vw;
     aspect-ratio: 1;
     border-radius: 50%;
-    background-color: black;
+    background-color: var(--clr-primary-black);
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -335,6 +335,15 @@
     pointer-events: none;
     will-change: transform;
     mix-blend-mode: difference;
+    /* transition: all ease-in-out 300ms; */
+  }
+  
+  .mouse-cursor[data-state="active"] {
+    background-color: var(--clr-neutral-white);
+  }
+
+  .mouse-cursor[data-state=""] {
+    background-color: var(--clr-primary-black);
   }
 
   .dp {

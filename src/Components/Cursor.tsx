@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
-export default function Cursor({cursorVariant}: {cursorVariant: any}) {
+export default function Cursor({cursorVariant, backgroundState}: {cursorVariant: any, backgroundState: string}) {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0
@@ -37,7 +37,7 @@ export default function Cursor({cursorVariant}: {cursorVariant: any}) {
     }
   }
 
-  return <motion.div className="mouse-cursor" 
+  return <motion.div className="mouse-cursor" data-state={backgroundState}
     variants={variants}
     animate={cursorVariant}
     transition={{
