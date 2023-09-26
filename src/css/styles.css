@@ -504,7 +504,7 @@
   }
 
   footer {
-    margin-top: 15rem;
+    margin-top: 30rem;
     padding-bottom: 10vw;
     transition: all ease-in-out 300ms;
     overflow-x: hidden;
@@ -560,7 +560,7 @@
       margin-inline: auto;
       border-radius: 50%;
       filter: brightness(1.2) saturate(0%) contrast(1.1);
-      width: 25vw;
+      width: 35vw;
       margin-bottom: 0rem;
       transform: rotate(-3deg);
       box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
@@ -623,7 +623,7 @@
       display: flex;
       justify-content: flex-end;
       margin-bottom: 1rem;
-      margin-top: 12rem;
+      margin-top: 8rem;
     }
 
     .about-txt {
@@ -662,5 +662,34 @@
     .skills-container {
       margin-inline: auto;
       width: 83%;
+    }
+
+    .skill-image {
+      width: 11vw;
+      margin-inline: auto;
+      filter: saturate(100%);
+    }
+
+    .interactive-button {
+      font-size: 6vw;
+      font-weight: 500;
+      background: none;
+      padding-block: 0.3em;
+      padding-inline: 0.7em;
+      /* border-radius: 100vmax; */
+      border: 0.1em solid var(--clr-neutral-white);
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      transition: all ease-in-out 300ms;
+      color: var(--clr-neutral-white);
+    }
+
+    footer {
+      padding-bottom: 10rem;
+      margin-top: 15rem;
+      transition: all ease-in-out 300ms;
+      overflow-x: hidden;
+      white-space: nowrap;
     }
   }
