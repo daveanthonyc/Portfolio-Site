@@ -86,6 +86,12 @@
     font-weight: var(--fw-regular);
     color: var(--clr-primary-black);
     overflow-x: hidden;
+    /* white-space: nowrap; */
+  }
+
+  main {
+    overflow-x: hidden;
+    /* white-space: nowrap; */
   }
 
   ::selection {
@@ -329,6 +335,12 @@
     filter: saturate(100%);
   }
 
+  .section-home-intro {
+    overflow: hidden;
+    white-space: nowrap;
+    padding-bottom: 3vw;
+  }
+
   .section-skills {
     margin-top: 2vw;
   }
@@ -492,11 +504,11 @@
   }
 
   footer {
-    padding-top: 15rem;
     margin-top: 15rem;
     padding-bottom: 10vw;
     transition: all ease-in-out 300ms;
-
+    overflow-x: hidden;
+    white-space: nowrap;
   }
 
   footer::after {
@@ -636,12 +648,12 @@
       justify-content: center;
       text-align: center;
       border: 1px solid #e5d7ce;
-      width: 7rem;
-      height: 9rem;
+      width: 5rem;
+      height: 6.5rem;
       border-radius: 5px;
       color: var(--clr-primary-black-lighter);
       text-transform: uppercase;
-      font-size: 11px;
+      font-size: 8px;
       font-weight: 500;
       letter-spacing: 2px;
       box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
