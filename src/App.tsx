@@ -70,7 +70,7 @@ function App() {
     <>
       <Cursor cursorVariant={cursorVariant}/>
       <header>
-        <Nav textEnter={textEnter} textLeave={textLeave}></Nav>
+        <Nav textEnter={textEnter} textLeave={textLeave} backgroundState={backgroundColor}></Nav>
       </header>
 
       <Test />
@@ -378,7 +378,7 @@ function App() {
             </div>
           </motion.div>
       
-          <div className='small-txt-ihero-2'>
+          <div className='small-txt-ihero-2' data-state="footer">
             <div className='about-txt'>
               <p className='test'>
                 Need someone to create <br />

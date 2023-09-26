@@ -134,6 +134,15 @@
     text-decoration: none;
     font-size: 2rem;
     letter-spacing: 2px;
+    transition: all ease-in-out 250ms;
+  }
+
+  .logo[data-state="active"] {
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-white);
+    text-decoration: none;
+    font-size: 2rem;
+    letter-spacing: 2px;
   }
 
   .clr-neutral-beige {
@@ -147,6 +156,16 @@
   .link-block {
     font-size: 1rem;
     color: var(--clr-primary-black);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    transition: all ease-in-out 250ms;
+  }
+
+  .link-block[data-state="active"] {
+    font-size: 1rem;
+    color: var(--clr-neutral-white);
     text-decoration: none;
     font-weight: 500;
     position: relative;
@@ -665,7 +684,7 @@
     }
 
     .skill-image {
-      width: 11vw;
+      width: 3.5rem;
       margin-inline: auto;
       filter: saturate(100%);
     }
