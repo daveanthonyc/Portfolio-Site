@@ -139,7 +139,7 @@
 
   .logo[data-state="active"] {
     font-weight: var(--fw-bold);
-    color: var(--clr-neutral-white);
+    color: var(--clr-accent-yellow);
     text-decoration: none;
     font-size: 2rem;
     letter-spacing: 2px;
@@ -165,7 +165,7 @@
 
   .link-block[data-state="active"] {
     font-size: 1rem;
-    color: var(--clr-accent-yellow);
+    color: var(--clr-neutral-white);
     text-decoration: none;
     font-weight: 500;
     position: relative;
