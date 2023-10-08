@@ -8,7 +8,8 @@ import jsicon from './assets/javascript-logo-8892AEFCAC-seeklogo.com.png'
 import tsicon from './assets/png-transparent-typescript-hd-logo.png'
 import reacticon from './assets/React-icon.svg.png'
 import mobx from './assets/mobx.png'
-import canva from './assets/canva mockup fin.png'
+import jobPage from './assets/canva mockup fin.png'
+import canva from './assets/canvaclonemock.png'
 import SkillCard from './Components/SkillCard'
 import Test from './Components/Test'
 import { motion, useTransform, useScroll, useMotionValue } from 'framer-motion'
@@ -254,7 +255,7 @@ function App() {
             <div className='portfolio-box' onMouseLeave={() => setPortfolioImg('none')} onMouseMove={(event) => {
               x.set(event.clientX)
             }}>
-              <a href="https://canva-job-search-clone.netlify.app/" title='live site' target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("Canva")}>
+              <a href="https://canva-editing-clone.netlify.app/" title='live site' target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("Canva")}>
                 <p className='small-txt-font'>01.</p>
                 <motion.h2 className='heading-txt margin-bottom'
                   animate={{
@@ -285,8 +286,39 @@ function App() {
                 />
               </a>
 
-              <a href='https://mern-todo-application.netlify.app/' title="live site" target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("ecommerce")}>
+              <a href="https://canva-job-search-clone.netlify.app/" title='live site' target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("jobPage")}>
                 <p className='small-txt-font'>02.</p>
+                <motion.h2 className='heading-txt margin-bottom'
+                  animate={{
+                    transform: portfolioImg==='jobPage' ? "translateX(15px)" : "translateX(0px)",
+                    opacity: (portfolioImg === 'jobPage' || portfolioImg === 'none') ? 1 : 0.4,
+                    color: (portfolioImg === 'jobPage' || portfolioImg === 'none') ? "#0f0f0f" : "#c8c1b4",
+                    transition: {
+                      duration: 1.7,
+                      ease: [0.3, 1.4, 0.3, 1]
+                    }
+                  }}
+                  onMouseEnter={textEnter}
+                  onMouseLeave={textLeave}
+                >Job Search Page.</motion.h2>
+                <motion.img style={{ translateX, rotateZ }} className='portfolio-img' src={jobPage} alt="job page" 
+                  initial={{
+                    opacity: 0,
+                  }}
+
+                  animate={{ 
+                    transform: portfolioImg === 'jobPage' ? `translateX(0px)` : "translateX(90px) rotate(4deg)",
+                    opacity: portfolioImg === 'jobPage' ? 1 : 0,
+                    transition: {
+                      duration: 1,
+                      ease: [0.3, 1.4, 0.3, 1]
+                    }
+                  }}
+                />
+              </a>
+
+              <a href='https://mern-todo-application.netlify.app/' title="live site" target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("ecommerce")}>
+                <p className='small-txt-font'>03.</p>
                 <motion.h2 className='heading-txt'
                   animate={{
                     transform: portfolioImg==='ecommerce' ? "translateX(15px)" : "translateX(0px)",
@@ -317,7 +349,7 @@ function App() {
               </a>
 
               <div className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("admin")}>
-                <p className='small-txt-font'>03.</p>
+                <p className='small-txt-font'>04.</p>
                 <motion.h2 className='heading-txt'
                   animate={{
                     transform: portfolioImg==='admin' ? "translateX(15px)" : "translateX(0px)",
