@@ -7,7 +7,6 @@ import cssicon from './assets/CSS3_logo.svg.png'
 import jsicon from './assets/javascript-logo-8892AEFCAC-seeklogo.com.png'
 import tsicon from './assets/png-transparent-typescript-hd-logo.png'
 import reacticon from './assets/React-icon.svg.png'
-import mobx from './assets/mobx.png'
 import jobPage from './assets/canva mockup fin.png'
 import canva from './assets/canvaclonemock.png'
 import SkillCard from './Components/SkillCard'
@@ -18,6 +17,8 @@ import Button from './Components/Button'
 import nodeicon from './assets/nodejs-logo-FBE122E377-seeklogo.com.png'
 import expressicon from './assets/expressjs_logo_icon_169185.png'
 import mongodbicon from './assets/mongodb-logo-D13D67C930-seeklogo.com.png'
+import reduxicon from './assets/Redux.png'
+import muiicon from './assets/mui.png'
 import todo from './assets/todomockups.png'
 
 function App() {
@@ -212,17 +213,20 @@ function App() {
             </motion.div>
           </div>
 
+        {/* SKILL CARD SECTION */}
+
         <section className='section-skills'>
           <div className='skills-box skills-container'>
-              <SkillCard key="child1" imgurl={htmlicon}>HTML</SkillCard>
-              <SkillCard key="child2" imgurl={cssicon}>CSS</SkillCard>
-              <SkillCard key="child3" imgurl={jsicon}>JavaScript</SkillCard>
-              <SkillCard key="child4" imgurl={tsicon}>TypeScript</SkillCard>
-              <SkillCard key="child6" imgurl={mobx}>MobX</SkillCard>
-              <SkillCard key="child9" imgurl={mongodbicon}>MongoDB</SkillCard>
-              <SkillCard key="child8" imgurl={expressicon}>Express</SkillCard>
-              <SkillCard key="child5" imgurl={reacticon}>React</SkillCard>
-              <SkillCard key="child7" imgurl={nodeicon}>Node.js</SkillCard>
+              <SkillCard  imgurl={htmlicon}>HTML</SkillCard>
+              <SkillCard  imgurl={cssicon}>CSS</SkillCard>
+              <SkillCard  imgurl={jsicon}>JavaScript</SkillCard>
+              <SkillCard  imgurl={tsicon}>TypeScript</SkillCard>
+              <SkillCard  imgurl={reduxicon}>Redux</SkillCard>
+              <SkillCard  imgurl={mongodbicon}>MongoDB</SkillCard>
+              <SkillCard  imgurl={expressicon}>Express</SkillCard>
+              <SkillCard  imgurl={reacticon}>React</SkillCard>
+              <SkillCard  imgurl={nodeicon}>Node.js</SkillCard>
+              <SkillCard  imgurl={muiicon}>Material UI</SkillCard>
             </div>
         </section>
         
