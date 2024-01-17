@@ -19,7 +19,6 @@ import expressicon from './assets/expressjs_logo_icon_169185.png'
 import mongodbicon from './assets/mongodb-logo-D13D67C930-seeklogo.com.png'
 import reduxicon from './assets/Redux.png'
 import muiicon from './assets/mui.png'
-import todo from './assets/todomockups.png'
 import Admin from './assets/Dashboard.png'
 
 function App() {
