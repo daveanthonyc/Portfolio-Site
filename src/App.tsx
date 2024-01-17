@@ -20,6 +20,7 @@ import mongodbicon from './assets/mongodb-logo-D13D67C930-seeklogo.com.png'
 import reduxicon from './assets/Redux.png'
 import muiicon from './assets/mui.png'
 import todo from './assets/todomockups.png'
+import Admin from './assets/Dashboard.png'
 
 function App() {
   const [cursorVariant, setCursorVariant] = useState("default")
@@ -259,6 +260,37 @@ function App() {
             <div className='portfolio-box' onMouseLeave={() => setPortfolioImg('none')} onMouseMove={(event) => {
               x.set(event.clientX)
             }}>
+              <a href="https://github.com/daveanthonyc/Pano" title='Github Repo' target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("Admin")}>
+                <p className='small-txt-font'>01.</p>
+                <motion.h2 className='heading-txt margin-bottom'
+                  animate={{
+                    transform: portfolioImg==='Admin' ? "translateX(15px)" : "translateX(0px)",
+                    opacity: (portfolioImg === 'Admin' || portfolioImg === 'none') ? 1 : 0.4,
+                    color: (portfolioImg === 'Admin' || portfolioImg === 'none') ? "#0f0f0f" : "#c8c1b4",
+                    transition: {
+                      duration: 1.7,
+                      ease: [0.3, 1.4, 0.3, 1]
+                    }
+                  }}
+                  onMouseEnter={textEnter}
+                  onMouseLeave={textLeave}
+                >Admin Dashboard.</motion.h2>
+                <motion.img style={{ translateX, rotateZ }} className='portfolio-img' src={Admin} alt="canva" 
+                  initial={{
+                    opacity: 0,
+                  }}
+
+                  animate={{ 
+                    transform: portfolioImg === 'Admin' ? `translateX(0px)` : "translateX(90px) rotate(4deg)",
+                    opacity: portfolioImg === 'Admin' ? 1 : 0,
+                    transition: {
+                      duration: 1,
+                      ease: [0.3, 1.4, 0.3, 1]
+                    }
+                  }}
+                />
+              </a>
+
               <a href="https://canva-editing-clone.netlify.app/" title='live site' target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("Canva")}>
                 <p className='small-txt-font'>01.</p>
                 <motion.h2 className='heading-txt margin-bottom'
@@ -321,37 +353,6 @@ function App() {
                 />
               </a>
 
-              <a href='https://mern-todo-application.netlify.app/' title="live site" target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("ecommerce")}>
-                <p className='small-txt-font'>03.</p>
-                <motion.h2 className='heading-txt'
-                  animate={{
-                    transform: portfolioImg==='ecommerce' ? "translateX(15px)" : "translateX(0px)",
-                    opacity: (portfolioImg === 'ecommerce' || portfolioImg === 'none') ? 1 : 0.4,                    color: (portfolioImg === 'ecommerce' || portfolioImg === 'none') ? "#0f0f0f" : "#c8c1b4",
-                    transition: {
-                      duration: 1,
-                      ease: [0.3, 1.4, 0.3, 1]
-                    }
-                  }}
-                  onMouseEnter={textEnter}
-                  onMouseLeave={textLeave}
-                >MERN Todo app.</motion.h2>
-                <motion.img style={{ translateX, rotateZ }} className='portfolio-img' src={todo} alt="todo app" 
-                  initial={{
-                    opacity: 0,
-                  }}
-
-                  animate={{ 
-                    transform: portfolioImg === 'ecommerce' ? `translateX(0px)` : "translateX(90px) rotate(4deg)",
-                    opacity: portfolioImg === 'ecommerce' ? 1 : 0,
-                    transition: {
-                      duration: 1,
-                      ease: [0.3, 1.4, 0.3, 1]
-                    }
-                  }}
-                />
-            
-              </a>
-
               <div className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("admin")}>
                 <p className='small-txt-font'>04.</p>
                 <motion.h2 className='heading-txt'
@@ -365,7 +366,7 @@ function App() {
                   }}
                   onMouseEnter={textEnter}
                   onMouseLeave={textLeave}
-                >Admin Dashboard.</motion.h2>
+                >Language Parser.</motion.h2>
                 <motion.div style={{ translateX, rotateZ }} className='portfolio-soon' 
                   initial={{
                     opacity: 0,
