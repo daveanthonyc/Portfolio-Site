@@ -452,6 +452,12 @@
     gap: 5vw;
   }
 
+  @media (max-width: 50em) {
+      .about-hero {
+          width: 10px;
+      }
+  }
+
   .about-txt {
     font-size: 2.5vw;
     font-weight: 400;
@@ -462,6 +468,13 @@
 
   .section-about {
     margin-top: -9vw;
+  }
+
+  @media (max-width: 50em) {
+      .section-about {
+          text-align: left;
+      }
+
   }
 
   .small-txt-font {
@@ -655,7 +668,7 @@
       display: flex;
       justify-content: flex-end;
       margin-bottom: 1rem;
-      margin-top: 8rem;
+      margin-top: 0.6rem;
     }
 
     .about-txt {
@@ -663,7 +676,7 @@
       font-weight: 300;
       letter-spacing: 1px;
       word-spacing: 8px;
-      width: 65vw;
+      width: 90vw;
     }
 
     .small-txt-ihero-3 {
