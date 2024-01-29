@@ -352,7 +352,7 @@ function App() {
                 />
               </a>
 
-              <div className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("admin")}>
+              <div className="portfolio-block-1 important" onMouseEnter={() => setPortfolioImg("admin")}>
                 <p className='small-txt-font'>04.</p>
                 <motion.h2 className='heading-txt'
                   animate={{

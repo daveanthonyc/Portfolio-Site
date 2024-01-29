@@ -508,11 +508,16 @@
 
   .portfolio-soon {
     position: absolute;
+    padding-left: 5px;
     right: 5vw;
     bottom: -1vw;
     width: 20vw;
     z-index: 2;
     background-color: #f9dd90;
+  }
+
+  .important {
+      margin-block: -34px !important;
   }
 
   .section-projects {
