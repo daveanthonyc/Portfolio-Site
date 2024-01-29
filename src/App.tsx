@@ -291,7 +291,7 @@ function App() {
               </a>
 
               <a href="https://canva-editing-clone.netlify.app/" title='live site' target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("Canva")}>
-                <p className='small-txt-font'>01.</p>
+                <p className='small-txt-font'>02.</p>
                 <motion.h2 className='heading-txt margin-bottom'
                   animate={{
                     transform: portfolioImg==='Canva' ? "translateX(15px)" : "translateX(0px)",
@@ -322,7 +322,7 @@ function App() {
               </a>
 
               <a href="https://canva-job-search-clone.netlify.app/" title='live site' target='_blank' className="portfolio-block-1" onMouseEnter={() => setPortfolioImg("jobPage")}>
-                <p className='small-txt-font'>02.</p>
+                <p className='small-txt-font'>03.</p>
                 <motion.h2 className='heading-txt margin-bottom'
                   animate={{
                     transform: portfolioImg==='jobPage' ? "translateX(15px)" : "translateX(0px)",
