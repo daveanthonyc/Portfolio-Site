@@ -96,9 +96,9 @@ function App() {
               }}
               >
               <h6>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;front-end &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;engineer
+              front-end &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;engineer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specialising
                 <br />
-                specialising&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UX _
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Design &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Systems _
               </h6>
             </motion.div>
           </div>
@@ -183,7 +183,7 @@ function App() {
                       I'm a passionate developer based in Sydney, Australia.
                       <br />
                       <br />
-                      No matter how complex the problem is, I am willing to take it head-on as I thrive in pushing the boundaries of what is possible in order to create elegant solutions.
+                      I love creating scalable frontend design systems in React that have contemporary UIs and interaction design. No matter how complex the problem is, I am willing to take it head-on as I thrive in pushing the boundaries of what is possible.
                     </p>
                   </div>
                 </div>
