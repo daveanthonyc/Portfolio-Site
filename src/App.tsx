@@ -20,6 +20,7 @@ import mongodbicon from './assets/mongodb-logo-D13D67C930-seeklogo.com.png'
 import reduxicon from './assets/Redux.png'
 import muiicon from './assets/mui.png'
 import Admin from './assets/Dashboard.png'
+import dockericon from './assets/97_Docker_logo_logos-512.png'
 
 function App() {
   const [cursorVariant, setCursorVariant] = useState("default")
@@ -227,6 +228,7 @@ function App() {
               <SkillCard  imgurl={reacticon}>React</SkillCard>
               <SkillCard  imgurl={nodeicon}>Node.js</SkillCard>
               <SkillCard  imgurl={muiicon}>Material UI</SkillCard>
+              <SkillCard  imgurl={dockericon}>Docker</SkillCard>
             </div>
         </section>
         
