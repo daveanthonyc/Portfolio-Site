@@ -21,6 +21,8 @@ import reduxicon from './assets/Redux.png'
 import muiicon from './assets/mui.png'
 import Admin from './assets/Dashboard.png'
 import dockericon from './assets/97_Docker_logo_logos-512.png'
+import storybookicon from './assets/storybook-icon.svg'
+import awsicon from './assets/AWS-Cloud-logo_32.svg'
 
 function App() {
   const [cursorVariant, setCursorVariant] = useState("default")
@@ -222,13 +224,15 @@ function App() {
               <SkillCard  imgurl={cssicon}>CSS</SkillCard>
               <SkillCard  imgurl={jsicon}>JavaScript</SkillCard>
               <SkillCard  imgurl={tsicon}>TypeScript</SkillCard>
+              <SkillCard  imgurl={reacticon}>React</SkillCard>
               <SkillCard  imgurl={reduxicon}>Redux</SkillCard>
+              <SkillCard  imgurl={muiicon}>Material UI</SkillCard>
+              <SkillCard  imgurl={storybookicon}>Storybook</SkillCard>
               <SkillCard  imgurl={mongodbicon}>MongoDB</SkillCard>
               <SkillCard  imgurl={expressicon}>Express</SkillCard>
-              <SkillCard  imgurl={reacticon}>React</SkillCard>
               <SkillCard  imgurl={nodeicon}>Node.js</SkillCard>
-              <SkillCard  imgurl={muiicon}>Material UI</SkillCard>
               <SkillCard  imgurl={dockericon}>Docker</SkillCard>
+              <SkillCard  imgurl={awsicon}>AWS</SkillCard>
             </div>
         </section>
         
